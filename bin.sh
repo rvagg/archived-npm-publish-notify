@@ -1,13 +1,12 @@
 #!/usr/bin/env node
 
-var filterFn
-  , path = process.argv[2]
+var path = require('path')
+  , filterFn
+  , file = process.argv[2]
 
-if (path) {
-  if (!/^[\/\.]/.test(path))
-    path = './' + path
-
-  filterFn = require(path)
+if (file) {
+  file = path.resolve(process.cwd(), file)
+  filterFn = require(file)
 }
 
 require('./')(filterFn)

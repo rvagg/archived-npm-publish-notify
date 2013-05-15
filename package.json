@@ -1,7 +1,7 @@
 {
     "name"            : "npm-publish-notify"
   , "description"     : "Desktop notifications on npm publish events"
-  , "version"         : "0.0.0"
+  , "version"         : "0.0.1"
   , "homepage"        : "https://github.com/rvagg/npm-publish-notify"
   , "authors"         : [
         "Rod Vagg <rod@vagg.org> (https://github.com/rvagg)"

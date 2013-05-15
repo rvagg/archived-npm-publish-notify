@@ -67,6 +67,10 @@ module.exports = function (doc) {
 }
 ```
 
+### Advanced filter examples
+
+Examples of fancier filters for this data can be found [here](https://github.com/rvagg/level-bot/blob/master/level-filter-stream.js) (filter based on package names, keywords, and dependencies) and [here](https://github.com/polyhack/polyhackbot/blob/master/npm-maintainer-filter-stream.js) (filter based on a defined array of npm maintainer usernames).
+
 
 ## Licence
 

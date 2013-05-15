@@ -1,0 +1,21 @@
+{
+    "name"            : "npm-publish-notify"
+  , "description"     : "Desktop notifications on npm publish events"
+  , "version"         : "0.0.0"
+  , "homepage"        : "https://github.com/rvagg/npm-publish-notify"
+  , "authors"         : [
+        "Rod Vagg <rod@vagg.org> (https://github.com/rvagg)"
+    ]
+  , "keywords"        : [ "npm", "stream" ]
+  , "main"            : "./npm-publish-notify.js"
+  , "repository"      : {
+        "type"               : "git"
+      , "url"                : "https://github.com/rvagg/npm-publish-notify.git"
+    }
+  , "dependencies" : {
+        "npm-publish-stream" : "~0.1.2"
+      , "readable-stream"    : "~1.0.2"
+    }
+  , "bin"             : "./bin.sh"
+  , "license"         : "MIT"
+}

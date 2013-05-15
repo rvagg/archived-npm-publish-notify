@@ -40,7 +40,8 @@ Perhaps you want to filter on packages that depend on a particular package you c
 
 ```js
 module.exports = function (doc) {
-  return Object.keys(pkg.versions[v].dependencies || {}).indexOf('my-special-package') != -1
+  var v = doc['dist-tags'] && doc['dist-tags'].latest
+  return v && Object.keys(doc.versions[v].dependencies || {}).indexOf('my-special-package') != -1
 }
 ```
 
@@ -50,7 +51,19 @@ Or perhaps you care more about keywords?
 
 ```js
 module.exports = function (doc) {
-  return (pkg.versions[v].keywords || []).indexOf('awesome') != -1
+  var v = doc['dist-tags'] && doc['dist-tags'].latest
+  return v && (doc.versions[v].keywords || []).indexOf('awesome') != -1
+}
+```
+
+How about a particular package author?
+
+**author_filter.js**
+
+```js
+module.exports = function (doc) {
+  var v = doc['dist-tags'] && doc['dist-tags'].latest
+  return v && doc.versions[v].maintainers.some(function (m) { return m.name == 'substack' })
 }
 ```
 
